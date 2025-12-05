@@ -3,7 +3,7 @@ name: Deploy Quartz to GitHub Pages
 on:
   push:
     branches:
-      - v4
+      - main
   workflow_dispatch:
 
 permissions:
@@ -13,11 +13,12 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-22.04
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,6 +27,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'npm'
+          cache-dependency-path: quartz/package-lock.json
       
       - name: Install Dependencies
         working-directory: quartz
@@ -46,6 +49,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-22.04
+    timeout-minutes: 5
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
