@@ -419,11 +419,747 @@ code {
 
 
 
-  // HERO CARDS (Recent Notes on Index)
+  
+
+
+
+  // HERO BANNER (Golden Ratio)
+
+
+
+  
 
 
 
   // =========================================
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  .hero-banner {
+
+
+
+  
+
+
+
+    width: 100%;
+
+
+
+  
+
+
+
+    margin-bottom: 2rem;
+
+
+
+  
+
+
+
+    border-radius: 24px;
+
+
+
+  
+
+
+
+    overflow: hidden;
+
+
+
+  
+
+
+
+    position: relative;
+
+
+
+  
+
+
+
+    display: flex;
+
+
+
+  
+
+
+
+    justify-content: center; // Center horizontally
+
+
+
+  
+
+
+
+    align-items: center;     // Center vertically
+
+
+
+  
+
+
+
+    text-align: left;
+
+
+
+  
+
+
+
+    padding: 3rem;
+
+
+
+  
+
+
+
+    box-sizing: border-box;
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    // Background Aesthetic
+
+
+
+  
+
+
+
+    background: linear-gradient(135deg, var(--color-lime-100) 0%, var(--color-lime-50) 100%);
+
+
+
+  
+
+
+
+    border: 1px solid var(--color-lime-200);
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    // Desktop Aspect Ratio
+
+
+
+  
+
+
+
+    aspect-ratio: 16 / 9;
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    // Mobile Aspect Ratio & Adjustments
+
+
+
+  
+
+
+
+    @media all and (max-width: 600px) {
+
+
+
+  
+
+
+
+      aspect-ratio: 4 / 5;
+
+
+
+  
+
+
+
+      padding: 2rem;
+
+
+
+  
+
+
+
+      align-items: flex-end; // Push text to bottom on mobile for drama
+
+
+
+  
+
+
+
+      text-align: left;
+
+
+
+  
+
+
+
+    }
+
+
+
+  
+
+
+
+  }
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  // Dark Mode Background
+
+
+
+  
+
+
+
+  :root[saved-theme="dark"] .hero-banner {
+
+
+
+  
+
+
+
+    background: linear-gradient(135deg, var(--color-lime-950) 0%, #1a1a1a 100%);
+
+
+
+  
+
+
+
+    border: 1px solid var(--color-lime-900);
+
+
+
+  
+
+
+
+  }
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  .hero-content {
+
+
+
+  
+
+
+
+    max-width: 800px;
+
+
+
+  
+
+
+
+    z-index: 2;
+
+
+
+  
+
+
+
+    width: 100%;
+
+
+
+  
+
+
+
+  }
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  // Golden Ratio Typography
+
+
+
+  
+
+
+
+  // Base (Caption) = 1rem
+
+
+
+  
+
+
+
+  // Subtitle       = 1rem * 1.618 = 1.618rem
+
+
+
+  
+
+
+
+  // Title          = 1.618rem * 1.618 = 2.618rem
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  .hero-title {
+
+
+
+  
+
+
+
+    font-family: var(--headerFont);
+
+
+
+  
+
+
+
+    font-weight: 800;
+
+
+
+  
+
+
+
+    line-height: 1.1;
+
+
+
+  
+
+
+
+    margin: 0 0 1.5rem 0 !important; // Override default h1 margins
+
+
+
+  
+
+
+
+    color: var(--dark);
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    // "HI 👋"
+
+
+
+  
+
+
+
+    font-size: 3rem; // ~2.618 rounded up for impact
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    @media all and (max-width: 600px) {
+
+
+
+  
+
+
+
+      font-size: 2.5rem;
+
+
+
+  
+
+
+
+    }
+
+
+
+  
+
+
+
+  }
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  .hero-subtitle {
+
+
+
+  
+
+
+
+    display: block;
+
+
+
+  
+
+
+
+    margin-top: 0.5rem;
+
+
+
+  
+
+
+
+    font-weight: 600;
+
+
+
+  
+
+
+
+    color: var(--secondary); // Lime accent
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    // Golden Ratio Level 2
+
+
+
+  
+
+
+
+    font-size: 1.618rem;
+
+
+
+  
+
+
+
+    line-height: 1.3;
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    @media all and (max-width: 600px) {
+
+
+
+  
+
+
+
+      font-size: 1.4rem;
+
+
+
+  
+
+
+
+    }
+
+
+
+  
+
+
+
+  }
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  .hero-caption {
+
+
+
+  
+
+
+
+    font-family: var(--bodyFont);
+
+
+
+  
+
+
+
+    color: var(--gray);
+
+
+
+  
+
+
+
+    margin: 0;
+
+
+
+  
+
+
+
+    max-width: 60ch; // Readable line length
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    // Golden Ratio Level 1 (Base)
+
+
+
+  
+
+
+
+    font-size: 1rem;
+
+
+
+  
+
+
+
+    line-height: 1.6;
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    border-left: 3px solid var(--tertiary);
+
+
+
+  
+
+
+
+    padding-left: 1rem;
+
+
+
+  
+
+
+
+  }
+
+
+
+  
+
+
+
+  
 
 
 

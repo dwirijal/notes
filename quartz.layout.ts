@@ -24,11 +24,20 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
+    // Hero Banner ONLY on Home Page
+    Component.ConditionalRender({
+      component: Component.Hero(),
+      condition: (page) => page.fileData.slug === "index",
+    }),
     Component.ConditionalRender({
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ArticleTitle(),
+    // Hide standard title on Home Page (Hero takes over)
+    Component.ConditionalRender({
+      component: Component.ArticleTitle(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
     Component.ContentMeta(),
     Component.TagList(),
     // Show Recent Notes as Cards ONLY on Home Page

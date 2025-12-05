@@ -6,35 +6,35 @@
       <description>Last 10 notes on Dwi Rijal Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Node E</title>
-    <link>https://dwirijal.github.io/notes/TestVault/Node_E</link>
-    <guid>https://dwirijal.github.io/notes/TestVault/Node_E</guid>
-    <description><![CDATA[ Node E (The End) Node terjauh dalam rantai ini. Connections Node_B . ]]></description>
-    <pubDate>Fri, 05 Dec 2025 16:38:36 GMT</pubDate>
-  </item><item>
-    <title>Node D</title>
-    <link>https://dwirijal.github.io/notes/TestVault/Node_D</link>
-    <guid>https://dwirijal.github.io/notes/TestVault/Node_D</guid>
-    <description><![CDATA[ Node D (Leaf 2) Ini adalah node ujung yang terhubung ke Hub. Connections Node_A . ]]></description>
-    <pubDate>Fri, 05 Dec 2025 16:38:36 GMT</pubDate>
-  </item><item>
-    <title>Node C</title>
-    <link>https://dwirijal.github.io/notes/TestVault/Node_C</link>
-    <guid>https://dwirijal.github.io/notes/TestVault/Node_C</guid>
-    <description><![CDATA[ Node C (Leaf 1) Ini adalah node ujung yang terhubung ke Hub. Connections Node_A . ]]></description>
-    <pubDate>Fri, 05 Dec 2025 16:38:36 GMT</pubDate>
+    <title>Node A</title>
+    <link>https://dwirijal.github.io/notes/TestVault/Node_A</link>
+    <guid>https://dwirijal.github.io/notes/TestVault/Node_A</guid>
+    <description><![CDATA[ Node A (The Hub) Ini adalah node pusat. Connections Node_B Node_C Node_D . ]]></description>
+    <pubDate>Fri, 05 Dec 2025 16:49:05 GMT</pubDate>
   </item><item>
     <title>Node B</title>
     <link>https://dwirijal.github.io/notes/TestVault/Node_B</link>
     <guid>https://dwirijal.github.io/notes/TestVault/Node_B</guid>
     <description><![CDATA[ Node B (The Bridge) Node ini menghubungkan Hub dengan Node E. Connections Node_A (Kembali ke Hub) Node_E (Lanjut ke E) . ]]></description>
-    <pubDate>Fri, 05 Dec 2025 16:38:36 GMT</pubDate>
+    <pubDate>Fri, 05 Dec 2025 16:49:05 GMT</pubDate>
   </item><item>
-    <title>Node A</title>
-    <link>https://dwirijal.github.io/notes/TestVault/Node_A</link>
-    <guid>https://dwirijal.github.io/notes/TestVault/Node_A</guid>
-    <description><![CDATA[ Node A (The Hub) Ini adalah node pusat. Connections Node_B Node_C Node_D . ]]></description>
-    <pubDate>Fri, 05 Dec 2025 16:38:36 GMT</pubDate>
+    <title>Node C</title>
+    <link>https://dwirijal.github.io/notes/TestVault/Node_C</link>
+    <guid>https://dwirijal.github.io/notes/TestVault/Node_C</guid>
+    <description><![CDATA[ Node C (Leaf 1) Ini adalah node ujung yang terhubung ke Hub. Connections Node_A . ]]></description>
+    <pubDate>Fri, 05 Dec 2025 16:49:05 GMT</pubDate>
+  </item><item>
+    <title>Node D</title>
+    <link>https://dwirijal.github.io/notes/TestVault/Node_D</link>
+    <guid>https://dwirijal.github.io/notes/TestVault/Node_D</guid>
+    <description><![CDATA[ Node D (Leaf 2) Ini adalah node ujung yang terhubung ke Hub. Connections Node_A . ]]></description>
+    <pubDate>Fri, 05 Dec 2025 16:49:05 GMT</pubDate>
+  </item><item>
+    <title>Node E</title>
+    <link>https://dwirijal.github.io/notes/TestVault/Node_E</link>
+    <guid>https://dwirijal.github.io/notes/TestVault/Node_E</guid>
+    <description><![CDATA[ Node E (The End) Node terjauh dalam rantai ini. Connections Node_B . ]]></description>
+    <pubDate>Fri, 05 Dec 2025 16:49:05 GMT</pubDate>
   </item><item>
     <title>Art_of_Storytelling</title>
     <link>https://dwirijal.github.io/notes/Finance/Art_of_Storytelling</link>
