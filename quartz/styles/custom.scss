@@ -344,8 +344,18 @@ code {
 
 
 // Hide the default floating mobile explorer toggle
+// FIX: Do not use display: none, it breaks JS click interaction or availability
+// Use opacity/visibility trick instead
 .explorer-toggle.mobile-explorer {
-  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 // Reset styles for button inside dock
@@ -372,7 +382,7 @@ code {
   transform: translateX(-50%);
   width: 90%;
   max-width: 400px;
-  z-index: 10000; // Higher than everything
+  z-index: 20005; // CRITICAL: Must be HIGHER than Sidebar (20000) so we can click to close!
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
