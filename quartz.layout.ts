@@ -31,6 +31,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    // Show Recent Notes as Cards ONLY on Home Page
+    Component.ConditionalRender({
+      component: Component.RecentNotes({ title: "Fresh Notes", limit: 6 }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
   ],
   left: [
     Component.MobileOnly(Component.Spacer()),
