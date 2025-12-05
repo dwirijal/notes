@@ -551,23 +551,7 @@ code {
 
 
 
-    // Background Aesthetic
-
-
-
-  
-
-
-
-    background: linear-gradient(135deg, var(--color-lime-100) 0%, var(--color-lime-50) 100%);
-
-
-
-  
-
-
-
-    border: 1px solid var(--color-lime-200);
+      // Background Aesthetic (Monochrome)
 
 
 
@@ -583,15 +567,7 @@ code {
 
 
 
-    // Desktop Aspect Ratio
-
-
-
-  
-
-
-
-    aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%);
 
 
 
@@ -607,7 +583,7 @@ code {
 
 
 
-    // Mobile Aspect Ratio & Adjustments
+      border: 1px solid #e5e7eb;
 
 
 
@@ -615,7 +591,7 @@ code {
 
 
 
-    @media all and (max-width: 600px) {
+    
 
 
 
@@ -623,7 +599,7 @@ code {
 
 
 
-      aspect-ratio: 4 / 5;
+      
 
 
 
@@ -631,7 +607,7 @@ code {
 
 
 
-      padding: 2rem;
+    
 
 
 
@@ -639,7 +615,7 @@ code {
 
 
 
-      align-items: flex-end; // Push text to bottom on mobile for drama
+      // Desktop Aspect Ratio
 
 
 
@@ -647,7 +623,151 @@ code {
 
 
 
-      text-align: left;
+    
+
+
+
+  
+
+
+
+      aspect-ratio: 16 / 9;
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+      
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+      // Mobile Aspect Ratio & Adjustments
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+      @media all and (max-width: 600px) {
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+        aspect-ratio: 4 / 5;
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+        padding: 2rem;
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+        align-items: flex-end; // Push text to bottom on mobile for drama
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+        text-align: left;
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+      }
+
+
+
+  
+
+
+
+    
 
 
 
@@ -663,7 +783,7 @@ code {
 
 
 
-  }
+    
 
 
 
@@ -671,7 +791,7 @@ code {
 
 
 
-  
+    
 
 
 
@@ -679,7 +799,7 @@ code {
 
 
 
-  // Dark Mode Background
+    
 
 
 
@@ -687,7 +807,7 @@ code {
 
 
 
-  :root[saved-theme="dark"] .hero-banner {
+    // Dark Mode Background (Monochrome)
 
 
 
@@ -695,7 +815,7 @@ code {
 
 
 
-    background: linear-gradient(135deg, var(--color-lime-950) 0%, #1a1a1a 100%);
+    
 
 
 
@@ -703,7 +823,7 @@ code {
 
 
 
-    border: 1px solid var(--color-lime-900);
+    :root[saved-theme="dark"] .hero-banner {
 
 
 
@@ -711,7 +831,7 @@ code {
 
 
 
-  }
+    
 
 
 
@@ -719,7 +839,7 @@ code {
 
 
 
-  
+      background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
 
 
 
@@ -727,7 +847,7 @@ code {
 
 
 
-  .hero-content {
+    
 
 
 
@@ -735,7 +855,87 @@ code {
 
 
 
-    max-width: 800px;
+      border: 1px solid #333;
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    }
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    .hero-content {
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+      max-width: 800px;
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    
 
 
 
