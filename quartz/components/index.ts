@@ -23,8 +23,8 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
-import MobileDock from "./MobileDock"
 import Hero from "./Hero"
+import TopTags from "./TopTags"
 
 export {
   ArticleTitle,
@@ -52,6 +52,6 @@ export {
   Comments,
   Flex,
   ConditionalRender,
-  MobileDock,
   Hero,
+  TopTags,
 }

@@ -143,7 +143,7 @@ code {
 
 
 
-// NEW NAVIGATION (NAVBAR & DOCK)
+// STICKY NAVBAR (Modified Default)
 
 
 
@@ -152,14 +152,6 @@ code {
 
 
 
-
-
-
-// Sticky Top Navbar
-
-
-
-// Fixed selector: The header is nested inside .center > .page-header
 
 
 
@@ -219,11 +211,11 @@ code {
 
 
 
-  z-index: 9999; // High z-index
+  z-index: 999; // High z-index
 
 
 
-  background: rgba(255, 255, 255, 0.8); // Semi-transparent white
+  background: rgba(255, 255, 255, 0.95); // Semi-transparent white
 
 
 
@@ -287,7 +279,7 @@ code {
 
 
 
-  background: rgba(33, 33, 33, 0.8); // Using #212121 base
+  background: rgba(33, 33, 33, 0.95); // Using #212121 base
 
 
 
@@ -343,78 +335,95 @@ code {
 
 
 
-// Hide the default floating mobile explorer toggle
-// FIX: Do not use display: none, it breaks JS click interaction or availability
-// Use opacity/visibility trick instead
-.explorer-toggle.mobile-explorer {
-  opacity: 0 !important;
-  pointer-events: none !important;
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  top: 0;
-  left: 0;
-  z-index: -1;
+// Restore Mobile Explorer Toggle Visibility and Position
+
+
+
+// Move it to the left of the navbar on mobile
+
+
+
+@media all and (max-width: 800px) {
+
+
+
+    .explorer-toggle.mobile-explorer {
+
+
+
+        display: inline-block !important;
+
+
+
+        opacity: 1 !important;
+
+
+
+        pointer-events: auto !important;
+
+
+
+        position: static !important;
+
+
+
+        width: auto !important;
+
+
+
+        height: auto !important;
+
+
+
+        margin-right: 10px;
+
+
+
+    }
+
+
+
+    
+
+
+
+    // Ensure header items align well with the toggle
+
+
+
+    .page-header header {
+
+
+
+        padding: 0.5rem 1rem; // Smaller padding on mobile
+
+
+
+    }
+
+
+
 }
 
-// Reset styles for button inside dock
-.mobile-dock button.dock-item {
-  font-family: inherit;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  width: auto;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-
-// Mobile Dock (Bottom)
-.mobile-dock {
-  position: fixed;
-  bottom: 2rem; // Lifted up slightly
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 400px;
-  z-index: 20005; // CRITICAL: Must be HIGHER than Sidebar (20000) so we can click to close!
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 24px; // More rounded
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  padding: 0.8rem 2rem;
-}
 
 
 
-  
 
 
 
-  // =========================================
+// =========================================
 
 
 
-  
+// HERO BANNER (Golden Ratio)
 
 
 
-  // HERO BANNER (Golden Ratio)
+// =========================================
 
 
 
-  
 
-
-
-  // =========================================
 
 
 
@@ -2546,183 +2555,7 @@ code {
 
 
 
-  // =========================================
-
-
-
   
-
-
-
-  // MOBILE UX REFINEMENTS
-
-
-
-  
-
-
-
-  // =========================================
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  @media all and (max-width: 800px) { // Using standard mobile/tablet breakpoint
-
-
-
-  
-
-
-
-    
-
-
-
-  
-
-
-
-    // 1. Sidebar Overlay Fix (Menu must cover Navbar & Banner)
-
-
-
-  
-
-
-
-    .sidebar.left {
-
-
-
-  
-
-
-
-      z-index: 20000 !important; // Higher than Navbar (9999) and Dock (10000)
-
-
-
-  
-
-
-
-      background-color: var(--light); // Ensure it's opaque
-
-
-
-  
-
-
-
-    }
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-    // 2. Simplify Navbar on Mobile
-
-
-
-  
-
-
-
-    // Hide Search in Navbar because we have it in the Dock
-
-
-
-  
-
-
-
-    .page-header .search {
-
-
-
-  
-
-
-
-      display: none !important;
-
-
-
-  
-
-
-
-    }
-
-
-
-  
-
-
-
-    
-
-
-
-  
-
-
-
-    // Ensure Darkmode toggle stays visible but maybe smaller or adjusted if needed
-
-
-
-  
-
-
-
-    .page-header .darkmode {
-
-
-
-  
-
-
-
-      margin-left: auto; // Push to right if search is gone
-
-
-
-  
-
-
-
-    }
-
-
-
-  
-
-
-
-  }
 
 
 

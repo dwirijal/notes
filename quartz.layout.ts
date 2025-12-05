@@ -10,13 +10,11 @@ export const sharedPageComponents: SharedLayout = {
     Component.Search(),
     Component.Darkmode(),
   ],
-  afterBody: [
-    Component.MobileOnly(Component.MobileDock()),
-  ],
+  afterBody: [], // Dock removed
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      "Instagram": "https://instagram.com/dwirijal_",
+      "GitHub": "https://github.com/dwirijal",
     },
   }),
 }
@@ -43,18 +41,28 @@ export const defaultContentPageLayout: PageLayout = {
     
     // --- SECTIONS PER VAULT (Home Page Only) ---
     
-    // 1. Finance Vault
+    // 1. Latest Updates (All)
+    Component.ConditionalRender({
+      component: Component.RecentNotes({ 
+        title: "Latest Updates", 
+        limit: 3,
+        linkToMore: "tags" as any // Just a generic link or removing it
+      }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+
+    // 2. Finance Vault
     Component.ConditionalRender({
       component: Component.RecentNotes({ 
         title: "Finance", 
         limit: 3,
         filter: (f) => f.slug!.startsWith("Finance/"),
-        linkToMore: "Finance" as any // Force cast if simple string issues arise
+        linkToMore: "Finance" as any
       }),
       condition: (page) => page.fileData.slug === "index",
     }),
 
-    // 2. Regular Notes (TestVault)
+    // 3. Regular Notes (TestVault)
     Component.ConditionalRender({
       component: Component.RecentNotes({ 
         title: "Regular Notes", 
@@ -62,6 +70,12 @@ export const defaultContentPageLayout: PageLayout = {
         filter: (f) => f.slug!.startsWith("TestVault/"),
         linkToMore: "TestVault" as any
       }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+    
+    // 4. Popular Tags
+    Component.ConditionalRender({
+      component: Component.TopTags(),
       condition: (page) => page.fileData.slug === "index",
     }),
   ],
