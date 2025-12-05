@@ -339,7 +339,15 @@ code {
 
 
 
+
+
+
+
 // Move it to the left of the navbar on mobile
+
+
+
+
 
 
 
@@ -347,7 +355,63 @@ code {
 
 
 
+
+
+
+
+    // Add horizontal padding to the main page content on mobile
+
+
+
+
+
+
+
+    .page {
+
+
+
+
+
+
+
+        padding-left: 1rem !important;
+
+
+
+
+
+
+
+        padding-right: 1rem !important;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     .explorer-toggle.mobile-explorer {
+
+
+
+
 
 
 
@@ -355,7 +419,15 @@ code {
 
 
 
+
+
+
+
         opacity: 1 !important;
+
+
+
+
 
 
 
@@ -363,7 +435,15 @@ code {
 
 
 
+
+
+
+
         position: static !important;
+
+
+
+
 
 
 
@@ -371,7 +451,15 @@ code {
 
 
 
+
+
+
+
         height: auto !important;
+
+
+
+
 
 
 
@@ -379,7 +467,15 @@ code {
 
 
 
+
+
+
+
     }
+
+
+
+
 
 
 
@@ -387,7 +483,15 @@ code {
 
 
 
+
+
+
+
     // Ensure header items align well with the toggle
+
+
+
+
 
 
 
@@ -395,7 +499,15 @@ code {
 
 
 
+
+
+
+
         padding: 0.5rem 1rem; // Smaller padding on mobile
+
+
+
+
 
 
 
@@ -403,7 +515,19 @@ code {
 
 
 
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
