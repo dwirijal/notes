@@ -141,107 +141,277 @@ code {
 
 // =========================================
 
+
+
 // NEW NAVIGATION (NAVBAR & DOCK)
+
+
 
 // =========================================
 
 
 
+
+
+
+
 // Sticky Top Navbar
 
-.page > header {
+
+
+// Fixed selector: The header is nested inside .center > .page-header
+
+
+
+.page .page-header {
+
+
+
+  margin-top: 0 !important; // Reset default margin
+
+
+
+  padding: 0 !important;
+
+
+
+}
+
+
+
+
+
+
+
+.page-header header {
+
+
 
   display: flex;
 
+
+
   align-items: center;
+
+
 
   gap: 1rem;
 
+
+
   padding: 1rem 2rem;
 
-  position: sticky;
+
+
+  position: fixed; // Fixed to viewport
+
+
 
   top: 0;
 
-  z-index: 100;
+
+
+  left: 0;
+
+
+
+  right: 0;
+
+
+
+  z-index: 9999; // High z-index
+
+
 
   background: rgba(255, 255, 255, 0.8); // Semi-transparent white
 
+
+
   backdrop-filter: blur(10px);
+
+
+
+  -webkit-backdrop-filter: blur(10px);
+
+
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
-  margin: 0 calc(-1 * var(--page-margin, 2rem)); // Extend full width if possible
 
-  width: calc(100% + 2 * var(--page-margin, 2rem));
+
+  margin: 0 !important; // Reset Quartz default header margin
+
+
+
+  width: 100%;
+
+
+
+  box-sizing: border-box;
+
+
 
 }
+
+
+
+
+
+
+
+// Adjust page padding so content isn't hidden behind fixed header
+
+
+
+.page {
+
+
+
+  padding-top: 80px !important; 
+
+
+
+}
+
+
+
+
 
 
 
 // Dark mode adjustment for navbar
 
-:root[saved-theme="dark"] .page > header {
 
-  background: rgba(0, 0, 0, 0.8);
+
+:root[saved-theme="dark"] .page-header header {
+
+
+
+  background: rgba(33, 33, 33, 0.8); // Using #212121 base
+
+
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
+
+
 }
+
+
+
+
 
 
 
 // Fix Page Title in Navbar
 
-.page > header .page-title {
+
+
+.page-header header .page-title {
+
+
 
   margin: 0;
 
+
+
   font-size: 1.2rem;
+
+
 
 }
 
 
 
-.page > header .page-title a {
+
+
+
+
+.page-header header .page-title a {
+
+
 
    text-decoration: none;
 
+
+
 }
+
+
+
+
 
 
 
 // Mobile Dock (Bottom)
 
+
+
 .mobile-dock {
+
+
 
   position: fixed;
 
-  bottom: 1rem;
+
+
+  bottom: 2rem; // Lifted up slightly
+
+
 
   left: 50%;
 
+
+
   transform: translateX(-50%);
+
+
 
   width: 90%;
 
+
+
   max-width: 400px;
 
-  z-index: 1000;
+
+
+  z-index: 10000; // Higher than everything
+
+
 
   background: rgba(255, 255, 255, 0.9);
 
+
+
   backdrop-filter: blur(12px);
+
+
+
+  -webkit-backdrop-filter: blur(12px);
+
+
 
   border: 1px solid rgba(0, 0, 0, 0.1);
 
-  border-radius: 20px;
 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 
-  padding: 0.8rem 1.5rem;
+  border-radius: 24px; // More rounded
+
+
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+
+
+  padding: 0.8rem 2rem;
+
+
 
 }
+
+
+
+
 
 
 
