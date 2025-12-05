@@ -1,85 +1,121 @@
 @use "./base.scss";
 
-// Dwi Rijal Notes - Cool & Professional Editorial Theme
+// Dwi Rijal Notes - Swiss / Pure Minimalist
 
 :root {
-  --radius: 8px;
-  --headerFont: "DM Sans";
-  --bodyFont: "Inter";
+  --radius: 0; // Squared off, strict
 }
 
 body {
-  font-family: var(--bodyFont), sans-serif;
-  letter-spacing: -0.015em; // Modern tight tracking
+  font-family: var(--bodyFont), "Inter", sans-serif;
+  letter-spacing: -0.01em;
   background-color: var(--light);
+  color: var(--dark);
 }
 
 // =========================================
-// TYPOGRAPHY "DISPLAY" STYLING
+// TYPOGRAPHY
 // =========================================
 
-h1.article-title {
-  font-family: var(--headerFont), sans-serif;
-  font-weight: 800; // Extra Bold for "Display" feel
-  font-size: 3.5rem; // HUGE
-  letter-spacing: -0.04em;
-  line-height: 1.1;
-  margin-bottom: 0.5em;
-
-  // Gradient Text Effect for "Cool" factor
-  background: linear-gradient(135deg, var(--dark) 30%, var(--secondary) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; // Standard for gradient text
-  color: var(--dark); // Fallback
-}
-
+h1,
 h2,
 h3 {
-  font-family: var(--headerFont), sans-serif;
+  font-family: var(--headerFont), "Space Grotesk", sans-serif;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  color: var(--dark);
   margin-top: 1.5em;
+  letter-spacing: -0.03em;
 }
 
-// =========================================
-// COOL CARD & LIST STYLING
-// =========================================
-
-.recent-notes {
-  h3 {
-    text-transform: uppercase;
-    font-size: 0.85em;
-    letter-spacing: 0.1em;
-    color: var(--gray);
-  }
+h1.article-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  line-height: 1.1;
+  border: none;
 }
 
-// Hover effects for note links in lists
-.section-li>.section {
-  transition: transform 0.2s ease;
+// Links - The only "decoration"
+a {
+  color: var(--dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s;
 
   &:hover {
-    transform: translateX(4px);
-    border-left-color: var(--secondary);
+    opacity: 0.6;
+    color: var(--dark);
+  }
+
+  &.internal {
+    background: transparent; // No backgrounds
   }
 }
 
 // =========================================
-// GLASSMORPHISM & PRE
+// LAYOUT & CONTAINERS (The Anti-Box)
 // =========================================
+
+// STRIP EVERYTHING
 .callout,
-pre {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: var(--radius);
+pre,
+.popover,
+.card,
+.recent-notes {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 1.5rem 0;
 }
 
-// Dark Mode Tweaks
-.darkmode {
-  h1.article-title {
-    background: linear-gradient(135deg, #ffffff 30%, var(--secondary) 100%);
-    -webkit-text-fill-color: transparent;
+// Indent blockquotes specifically
+blockquote {
+  border-left: 2px solid var(--dark);
+  padding-left: 1.5rem;
+  font-style: italic;
+  font-family: serif; // Mix serif for quotes
+  color: var(--gray);
+}
+
+// Code blocks - Minimal gray background only
+pre {
+  background-color: var(--lightgray) !important;
+  padding: 1rem !important;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9em;
+  background: var(--lightgray);
+  padding: 0.1em 0.3em;
+}
+
+// Sidebar - Floating text
+.left,
+.right {
+  border: none;
+}
+
+// Tags - Text only
+.tag-link {
+  background: transparent;
+  border: none;
+  color: var(--gray);
+  padding: 0;
+  margin-right: 1em;
+
+  &:before {
+    content: "#";
+    color: var(--gray);
+  }
+
+  &:hover {
+    background: transparent;
+    color: var(--dark);
   }
 }
