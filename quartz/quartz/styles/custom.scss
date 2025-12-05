@@ -1,0 +1,85 @@
+@use "./base.scss";
+
+// Dwi Rijal Notes - Cool & Professional Editorial Theme
+
+:root {
+  --radius: 8px;
+  --headerFont: "DM Sans";
+  --bodyFont: "Inter";
+}
+
+body {
+  font-family: var(--bodyFont), sans-serif;
+  letter-spacing: -0.015em; // Modern tight tracking
+  background-color: var(--light);
+}
+
+// =========================================
+// TYPOGRAPHY "DISPLAY" STYLING
+// =========================================
+
+h1.article-title {
+  font-family: var(--headerFont), sans-serif;
+  font-weight: 800; // Extra Bold for "Display" feel
+  font-size: 3.5rem; // HUGE
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+
+  // Gradient Text Effect for "Cool" factor
+  background: linear-gradient(135deg, var(--dark) 30%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; // Standard for gradient text
+  color: var(--dark); // Fallback
+}
+
+h2,
+h3 {
+  font-family: var(--headerFont), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-top: 1.5em;
+}
+
+// =========================================
+// COOL CARD & LIST STYLING
+// =========================================
+
+.recent-notes {
+  h3 {
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+  }
+}
+
+// Hover effects for note links in lists
+.section-li>.section {
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateX(4px);
+    border-left-color: var(--secondary);
+  }
+}
+
+// =========================================
+// GLASSMORPHISM & PRE
+// =========================================
+.callout,
+pre {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius);
+}
+
+// Dark Mode Tweaks
+.darkmode {
+  h1.article-title {
+    background: linear-gradient(135deg, #ffffff 30%, var(--secondary) 100%);
+    -webkit-text-fill-color: transparent;
+  }
+}
