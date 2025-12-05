@@ -11,17 +11,17 @@ const MobileDock: QuartzComponent = ({ displayClass }: QuartzComponentProps) => 
           <span>Home</span>
         </a>
         
+        {/* Explorer Toggle (Proxy) */}
+        <button class="dock-item" onclick="const el = document.querySelector('.mobile-explorer'); if(el) el.click();" aria-label="Menu" style="background:none;border:none;cursor:pointer;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <span>Menu</span>
+        </button>
+
         <a href="/tags" class="dock-item" aria-label="Tags">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>
           <span>Tags</span>
         </a>
 
-        {/* Search Trigger - This relies on the global search shortcut or overlay usually. 
-            For now, we link to a search page or rely on the top navbar search for functionality.
-            However, if we want a dock button to open search, we need to target the search input.
-            Let's keep it simple: Just Home, Tags, and maybe Graph or TOC.
-        */}
-        
         <a href="#" class="dock-item search-trigger-mobile" onclick="document.querySelector('.search-button').click(); return false;" aria-label="Search">
            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
            <span>Search</span>
