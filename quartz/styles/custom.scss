@@ -1800,51 +1800,107 @@ code {
 
 
 
-  // Dark Mode Card Overrides
+    // Dark Mode Card Overrides
 
 
 
-  :root[saved-theme="dark"] .center .recent-notes li {
+  
 
 
 
-    background: #2a2a2a; // Lighter than #212121
+    :root[saved-theme="dark"] .center .recent-notes li {
 
 
 
-    border: 1px solid rgba(255,255,255,0.05);
+  
 
 
 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      background: #2a2a2a; // Lighter than #212121
 
 
 
-    
+  
 
 
 
-    a { color: var(--light); }
+      border: 1px solid rgba(255,255,255,0.05);
 
 
 
-    
+  
 
 
 
-    &:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 
 
 
-      background: var(--secondary); // Lime
+  
 
 
 
-      a { color: black !important; } // Lime is bright, so black text
+      
 
 
 
-      .meta { color: rgba(0,0,0,0.6) !important; }
+  
+
+
+
+      a { color: var(--light); }
+
+
+
+  
+
+
+
+      
+
+
+
+  
+
+
+
+      &:hover {
+
+
+
+  
+
+
+
+        background: var(--secondary); // Lime
+
+
+
+  
+
+
+
+        a { color: black !important; } // Lime is bright, so black text
+
+
+
+  
+
+
+
+        .meta { color: rgba(0,0,0,0.6) !important; }
+
+
+
+  
+
+
+
+      }
+
+
+
+  
 
 
 
@@ -1852,7 +1908,203 @@ code {
 
 
 
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  // =========================================
+
+
+
+  
+
+
+
+  // MOBILE UX REFINEMENTS
+
+
+
+  
+
+
+
+  // =========================================
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  @media all and (max-width: 800px) { // Using standard mobile/tablet breakpoint
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    // 1. Sidebar Overlay Fix (Menu must cover Navbar & Banner)
+
+
+
+  
+
+
+
+    .sidebar.left {
+
+
+
+  
+
+
+
+      z-index: 20000 !important; // Higher than Navbar (9999) and Dock (10000)
+
+
+
+  
+
+
+
+      background-color: var(--light); // Ensure it's opaque
+
+
+
+  
+
+
+
+    }
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+    // 2. Simplify Navbar on Mobile
+
+
+
+  
+
+
+
+    // Hide Search in Navbar because we have it in the Dock
+
+
+
+  
+
+
+
+    .page-header .search {
+
+
+
+  
+
+
+
+      display: none !important;
+
+
+
+  
+
+
+
+    }
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+    // Ensure Darkmode toggle stays visible but maybe smaller or adjusted if needed
+
+
+
+  
+
+
+
+    .page-header .darkmode {
+
+
+
+  
+
+
+
+      margin-left: auto; // Push to right if search is gone
+
+
+
+  
+
+
+
+    }
+
+
+
+  
+
+
+
   }
+
+
+
+  
+
+
+
+  
 
 
 
