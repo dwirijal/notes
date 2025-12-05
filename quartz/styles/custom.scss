@@ -1207,31 +1207,7 @@ code {
 
 
 
-    ul {
-
-
-
-      display: grid;
-
-
-
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-
-
-
-      gap: 1.5rem;
-
-
-
-      list-style: none;
-
-
-
-      padding: 0;
-
-
-
-    }
+      ul {
 
 
 
@@ -1239,11 +1215,175 @@ code {
 
 
 
-    li {
+        display: grid;
 
 
 
-      background: var(--lightgray);
+  
+
+
+
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+
+
+  
+
+
+
+        gap: 1.5rem;
+
+
+
+  
+
+
+
+        list-style: none;
+
+
+
+  
+
+
+
+        padding: 0;
+
+
+
+  
+
+
+
+        margin: 0; // Ensure no default margin kills layout
+
+
+
+  
+
+
+
+      }
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+      // Mobile adjustments for grid
+
+
+
+  
+
+
+
+      @media all and (max-width: 600px) {
+
+
+
+  
+
+
+
+        ul {
+
+
+
+  
+
+
+
+          grid-template-columns: 1fr; // Force single column on mobile
+
+
+
+  
+
+
+
+        }
+
+
+
+  
+
+
+
+        
+
+
+
+  
+
+
+
+        li {
+
+
+
+  
+
+
+
+            padding: 1.5rem; // Slightly smaller padding
+
+
+
+  
+
+
+
+        }
+
+
+
+  
+
+
+
+      }
+
+
+
+  
+
+
+
+    
+
+
+
+  
+
+
+
+      li {
+
+
+
+  
+
+
+
+        background: var(--lightgray);
+
+
+
+  
+
+
+
+    
 
 
 
