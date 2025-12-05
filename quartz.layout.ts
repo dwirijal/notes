@@ -57,7 +57,11 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    Component.RecentNotes({ title: "Latest Stories", limit: 5 }), // Show recent files
+    // Hide 'RecentNotes' in sidebar on index page to avoid redundancy with main content cards
+    Component.ConditionalRender({
+      component: Component.RecentNotes({ title: "Latest Stories", limit: 5 }),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
   ],
 }
 
