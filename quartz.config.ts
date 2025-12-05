@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz", // You might want to update this later
+    baseUrl: "dwirijal.github.io/notes",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -29,26 +29,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#ffffff",
-          lightgray: "#f0f0f0",  // Almost white, for subtle separators only
-          gray: "#888888",
-          darkgray: "#404040",
-          dark: "#000000",       // Pure Black
-          secondary: "#000000",  // Pure Black Accents
-          tertiary: "#666666",
-          highlight: "rgba(0, 0, 0, 0.05)",
-          textHighlight: "#eee",
+          light: "#fefefe",      // Requested White
+          lightgray: "#e5e7eb",
+          gray: "#6b7280",
+          darkgray: "#374151",
+          dark: "#1f2937",
+          secondary: "#4d7c0f",  // Lime-700
+          tertiary: "#84cc16",   // Lime-500
+          highlight: "rgba(77, 124, 15, 0.15)", // Lime tint
+          textHighlight: "rgba(77, 124, 15, 0.15)",
         },
         darkMode: {
-          light: "#000000",      // Pure Black
-          lightgray: "#1a1a1a",
-          gray: "#888888",
-          darkgray: "#d4d4d4",
-          dark: "#ffffff",
-          secondary: "#ffffff",
-          tertiary: "#999999",
-          highlight: "rgba(255, 255, 255, 0.1)",
-          textHighlight: "#333",
+          light: "#212121",      // Requested Dark
+          lightgray: "#2e2e2e",
+          gray: "#9ca3af",
+          darkgray: "#d1d5db",
+          dark: "#f3f4f6",
+          secondary: "#bef264",  // Lime-300 (Better contrast for dark mode than 700)
+          tertiary: "#a3e635",   // Lime-400
+          highlight: "rgba(190, 242, 100, 0.15)", // Lime tint
+          textHighlight: "rgba(190, 242, 100, 0.15)",
         },
       },
     },
