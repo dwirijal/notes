@@ -407,6 +407,14 @@ code {
 
 
 
+    // INTEGRATE EXPLORER TOGGLE INTO NAVBAR
+
+
+
+
+
+
+
     .explorer-toggle.mobile-explorer {
 
 
@@ -415,7 +423,7 @@ code {
 
 
 
-        display: inline-block !important;
+        display: inline-flex !important;
 
 
 
@@ -439,7 +447,7 @@ code {
 
 
 
-        position: static !important;
+        
 
 
 
@@ -447,7 +455,7 @@ code {
 
 
 
-        width: auto !important;
+        // Fixed position to sit "inside" the sticky navbar
 
 
 
@@ -455,7 +463,7 @@ code {
 
 
 
-        height: auto !important;
+        position: fixed !important;
 
 
 
@@ -463,7 +471,95 @@ code {
 
 
 
-        margin-right: 10px;
+        top: 0.9rem !important; // Align vertically with text
+
+
+
+
+
+
+
+        left: 1rem !important;
+
+
+
+
+
+
+
+        z-index: 10002 !important; // Above navbar background
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        margin: 0 !important;
+
+
+
+
+
+
+
+        color: var(--dark); // Match navbar text color
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        // Ensure icon size is consistent
+
+
+
+
+
+
+
+        svg {
+
+
+
+
+
+
+
+            width: 24px;
+
+
+
+
+
+
+
+            height: 24px;
+
+
+
+
+
+
+
+        }
 
 
 
@@ -487,7 +583,7 @@ code {
 
 
 
-    // Ensure header items align well with the toggle
+    // Adjust Navbar padding to make room for the button
 
 
 
@@ -503,7 +599,23 @@ code {
 
 
 
-        padding: 0.5rem 1rem; // Smaller padding on mobile
+        padding-left: 3.5rem !important; // Push title to the right
+
+
+
+
+
+
+
+        padding-right: 1rem !important;
+
+
+
+
+
+
+
+        justify-content: flex-start; // Ensure items start after padding
 
 
 
@@ -520,6 +632,14 @@ code {
 
 
 }
+
+
+
+
+
+
+
+
 
 
 
