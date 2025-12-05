@@ -1350,11 +1350,7 @@ code {
 
 
 
-  .center .recent-notes {
-
-
-
-    margin-top: 3rem;
+    .center .recent-notes {
 
 
 
@@ -1362,27 +1358,631 @@ code {
 
 
 
-    h3 {
+  
 
 
 
-      font-size: 1.5rem;
+  
 
 
 
-      margin-bottom: 1.5rem;
+      margin-top: 3rem;
 
 
 
-      font-weight: 800;
+  
 
 
 
-      letter-spacing: -0.05em;
+  
 
 
 
-    }
+  
+
+
+
+      position: relative; // For absolute positioning of "Show More" button
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+      h3 {
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        font-size: 1.5rem;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        margin-bottom: 1.5rem;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        font-weight: 800;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        letter-spacing: -0.05em;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+      }
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+      // The "Show More" link container
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+      & > p {
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        position: absolute;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        top: 0;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        right: 0;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        margin: 0;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+      }
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+      // The "Show More" Button Style
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+      & > p > a {
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        font-family: var(--codeFont);
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        font-size: 0.8rem;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        text-decoration: none;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        background: transparent;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        border: 1px solid var(--lightgray);
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        padding: 0.4rem 0.8rem;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        border-radius: 20px;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        color: var(--gray);
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        transition: all 0.2s ease;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        text-transform: uppercase;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        letter-spacing: 0.05em;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        &:hover {
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+          background: var(--secondary);
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+          color: white;
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+          border-color: var(--secondary);
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+        }
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+      }
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
 
 
 
@@ -1391,6 +1991,22 @@ code {
 
 
       ul {
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
 
 
 

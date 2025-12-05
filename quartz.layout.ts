@@ -40,9 +40,28 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ContentMeta(),
     Component.TagList(),
-    // Show Recent Notes as Cards ONLY on Home Page
+    
+    // --- SECTIONS PER VAULT (Home Page Only) ---
+    
+    // 1. Finance Vault
     Component.ConditionalRender({
-      component: Component.RecentNotes({ title: "Fresh Notes", limit: 6 }),
+      component: Component.RecentNotes({ 
+        title: "Finance", 
+        limit: 3,
+        filter: (f) => f.slug!.startsWith("Finance/"),
+        linkToMore: "Finance" as any // Force cast if simple string issues arise
+      }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+
+    // 2. Regular Notes (TestVault)
+    Component.ConditionalRender({
+      component: Component.RecentNotes({ 
+        title: "Regular Notes", 
+        limit: 3,
+        filter: (f) => f.slug!.startsWith("TestVault/"),
+        linkToMore: "TestVault" as any
+      }),
       condition: (page) => page.fileData.slug === "index",
     }),
   ],
