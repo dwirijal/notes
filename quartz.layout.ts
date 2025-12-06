@@ -43,8 +43,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Comments({
       provider: 'giscus',
       options: {
-        // repo: 'dwirijal/notes', // Placeholder: replace with actual repo
-        // repoId: 'R_kgDOL-0i9g', // Placeholder: replace with actual repo ID
+        repo: 'dwirijal/notes', // Placeholder: replace with actual repo
+        repoId: 'R_kgDOL-0i9g', // Placeholder: replace with actual repo ID
         // category: 'Announcements',
         // categoryId: 'DIC_kwDOL-0i9s4Cejyi',
         repo: 'placeholder/repo',
