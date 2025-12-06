@@ -40,19 +40,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
 
     // --- SECTIONS PER VAULT (Home Page Only) ---
-    Component.Comments({
-      provider: 'giscus',
-      options: {
-        // repo: 'dwirijal/notes', // Placeholder: replace with actual repo
-        // repoId: 'R_kgDOL-0i9g', // Placeholder: replace with actual repo ID
-        // category: 'Announcements',
-        // categoryId: 'DIC_kwDOL-0i9s4Cejyi',
-        repo: 'placeholder/repo',
-        repoId: 'repo-id',
-        category: 'category-name',
-        categoryId: 'category-id',
-      }
-    }),
 
     // 1. Latest Updates (All)
     Component.ConditionalRender({
