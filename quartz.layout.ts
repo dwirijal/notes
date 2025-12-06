@@ -38,13 +38,26 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ContentMeta(),
     Component.TagList(),
-    
+
     // --- SECTIONS PER VAULT (Home Page Only) ---
-    
+    Component.Comments({
+      provider: 'giscus',
+      options: {
+        // repo: 'dwirijal/notes', // Placeholder: replace with actual repo
+        // repoId: 'R_kgDOL-0i9g', // Placeholder: replace with actual repo ID
+        // category: 'Announcements',
+        // categoryId: 'DIC_kwDOL-0i9s4Cejyi',
+        repo: 'placeholder/repo',
+        repoId: 'repo-id',
+        category: 'category-name',
+        categoryId: 'category-id',
+      }
+    }),
+
     // 1. Latest Updates (All)
     Component.ConditionalRender({
-      component: Component.RecentNotes({ 
-        title: "Latest Updates", 
+      component: Component.RecentNotes({
+        title: "Latest Updates",
         limit: 3,
         linkToMore: "tags" as any // Just a generic link or removing it
       }),
@@ -53,8 +66,8 @@ export const defaultContentPageLayout: PageLayout = {
 
     // 2. Finance Vault
     Component.ConditionalRender({
-      component: Component.RecentNotes({ 
-        title: "Finance", 
+      component: Component.RecentNotes({
+        title: "Finance",
         limit: 3,
         filter: (f) => f.slug!.startsWith("Finance/"),
         linkToMore: "Finance" as any
@@ -64,15 +77,15 @@ export const defaultContentPageLayout: PageLayout = {
 
     // 3. Regular Notes (TestVault)
     Component.ConditionalRender({
-      component: Component.RecentNotes({ 
-        title: "Regular Notes", 
+      component: Component.RecentNotes({
+        title: "Regular Notes",
         limit: 3,
         filter: (f) => f.slug!.startsWith("TestVault/"),
         linkToMore: "TestVault" as any
       }),
       condition: (page) => page.fileData.slug === "index",
     }),
-    
+
     // 4. Popular Tags
     Component.ConditionalRender({
       component: Component.TopTags(),
@@ -81,6 +94,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.MobileOnly(Component.Spacer()),
+    Component.Stats(),
     Component.Explorer(),
   ],
   right: [
@@ -103,6 +117,7 @@ export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.MobileOnly(Component.Spacer()),
+    Component.Stats(),
     Component.Explorer(),
   ],
   right: [],

@@ -24,6 +24,7 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import Hero from "./Hero"
+import Stats from "./Stats"
 import TopTags from "./TopTags"
 
 export {
@@ -53,5 +54,6 @@ export {
   Flex,
   ConditionalRender,
   Hero,
+  Stats,
   TopTags,
 }

@@ -29,26 +29,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#fefefe",      // Requested White
-          lightgray: "#e5e7eb",
-          gray: "#6b7280",
-          darkgray: "#374151",
-          dark: "#1f2937",
-          secondary: "#4d7c0f",  // Lime-700
-          tertiary: "#84cc16",   // Lime-500
-          highlight: "rgba(77, 124, 15, 0.15)", // Lime tint
-          textHighlight: "rgba(77, 124, 15, 0.15)",
+          light: "#faf8f8",
+          lightgray: "#e5e5e5",
+          gray: "#b8b8b8",
+          darkgray: "#4e4e4e",
+          dark: "#2b2b2b",
+          secondary: "#284b63",
+          tertiary: "#84a59d",
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#212121",      // Requested Dark
-          lightgray: "#2e2e2e",
-          gray: "#9ca3af",
-          darkgray: "#d1d5db",
-          dark: "#f3f4f6",
-          secondary: "#bef264",  // Lime-300 (Better contrast for dark mode than 700)
-          tertiary: "#a3e635",   // Lime-400
-          highlight: "rgba(190, 242, 100, 0.15)", // Lime tint
-          textHighlight: "rgba(190, 242, 100, 0.15)",
+          light: "#161618",
+          lightgray: "#393639",
+          gray: "#646464",
+          darkgray: "#d4d4d4",
+          dark: "#ebebec",
+          secondary: "#7b97aa",
+          tertiary: "#84a59d",
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#b3aa0288",
         },
       },
     },
@@ -88,7 +88,7 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
+      Plugin.NotFoundPage(),
       Plugin.CustomOgImages(),
     ],
   },
